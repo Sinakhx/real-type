@@ -1,6 +1,6 @@
 {
     "name": "real-type",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "get real type of javascript's built-in data structures",
     "keywords": [
         "real-type"
