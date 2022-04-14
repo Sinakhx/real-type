@@ -1,1 +1,1 @@
-var a=e=>e,l=a;export{l as default};
+var r=t=>Number.isNaN(t)?"NaN":(t==null?void 0:t.toString)&&typeof t.toString=="function"&&t.toString().slice(0,6)==="class "?"Class":Object.prototype.toString.call(t).slice(8,-1),i=r;export{i as default};

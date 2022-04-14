@@ -1,3 +1,3 @@
-declare const realTypeOf: (value: any) => any;
+declare const realTypeOf: (val: any) => string;
 
 export { realTypeOf as default };
