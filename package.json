@@ -1,0 +1,69 @@
+{
+    "name": "real-type",
+    "version": "0.0.1",
+    "description": "get real type of javascript's built-in data structures",
+    "keywords": [
+        "real-type"
+    ],
+    "homepage": "https://github.com/Sinakhx/real-type#readme",
+    "bugs": {
+        "url": "https://github.com/Sinakhx/real-type/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Sinakhx/real-type.git"
+    },
+    "license": "MIT",
+    "author": "Sina Khodabandehloo <khodabandehloo.sina@gmail.com>",
+    "type": "module",
+    "main": "dist/index.js",
+    "scripts": {
+        "prebuild": "npm run test",
+        "build": "tsup-node lib/index.ts --format esm,cjs --minify --dts",
+        "lint": "eslint .",
+        "lint-staged": "lint-staged",
+        "lint:fix": "eslint --fix .",
+        "prepare": "husky install",
+        "prepublishOnly": "npm run build",
+        "prettier": "prettier --write .",
+        "push": "git push --follow-tags",
+        "release": "standard-version",
+        "release:first": "npm run release -- --first-release && npm run push && npm publish",
+        "release:major": "npm run release -- --release-as major && npm run push && npm publish",
+        "release:minor": "npm run release -- --release-as minor && npm run push && npm publish",
+        "release:notag": "npm run release -- --no-git-tag-version && npm run push && npm publish",
+        "release:patch": "npm run release -- --release-as patch && npm run push && npm publish",
+        "test": "jest",
+        "test:c": "jest --coverage",
+        "test:w": "jest --watch",
+        "typecheck": "tsc --noEmit",
+        "exp": "node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm lib/index.ts"
+    },
+    "devDependencies": {
+        "@babel/core": "*",
+        "@babel/preset-env": "*",
+        "@babel/preset-typescript": "*",
+        "@commitlint/cli": "^16.2.3",
+        "@commitlint/config-conventional": "^16.2.1",
+        "@types/jest": "*",
+        "@types/node": "^17.0.24",
+        "@typescript-eslint/eslint-plugin": "^5.19.0",
+        "@typescript-eslint/parser": "^5.19.0",
+        "babel-jest": "*",
+        "eslint": "^8.13.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jest": "^26.1.4",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.4",
+        "jest": "*",
+        "lint-staged": "^12.3.7",
+        "prettier": "^2.6.2",
+        "standard-version": "^9.3.2",
+        "ts-node": "^10.7.0",
+        "tsup": "*",
+        "typescript": "*"
+    }
+}
