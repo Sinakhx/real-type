@@ -1,5 +1,5 @@
 {
-    "name": "real-type",
+    "name": "@sinakhx/real-type",
     "version": "1.0.1",
     "description": "get real type of javascript's built-in data structures",
     "keywords": [
