@@ -1,8 +1,8 @@
-# **real-type**
-![npm](https://img.shields.io/npm/v/real-type?color=%239f9f9f&style=flat-square)
-![license](https://img.shields.io/npm/l/real-type?color=red&style=flat-square)
+# **@sinakhx/real-type**
+![npm](https://img.shields.io/npm/v/@sinakhx/real-type?color=%239f9f9f&style=flat-square)
+![license](https://img.shields.io/npm/l/@sinakhx/real-type?color=red&style=flat-square)
 ![tests](https://img.shields.io/badge/tests-100%25-green?style=flat-square)
-![types](https://img.shields.io/npm/types/real-type?style=flat-square)
+![types](https://img.shields.io/npm/types/@sinakhx/real-type?style=flat-square)
 
 get real type of JavaScript's built-in data structures
 
@@ -29,7 +29,7 @@ Object.prototype.toString.call(NaN) // "[object Number]"
 Object.prototype.toString.call(class Foo{}) // "[object Function]"
 ```
 
-if you find it silly to treat `NaN` as `number` or classes as functions or even using `Object.prototype.toString.call` to get an array-like string, you can use `real-type` instead:
+if you find it silly to treat `NaN` as `number` or classes as functions or even using `Object.prototype.toString.call` to get an array-like string, you can use `@sinakhx/real-type` instead:
 
 ```js
 realType(null)        // "Null"
@@ -46,17 +46,17 @@ realTypeOf(new WeakMap()) // "WeakMap"
 ## **Installation**
 
 ```bash
-npm install real-type
+npm install @sinakhx/real-type
 # or
-yarn add real-type
+yarn add @sinakhx/real-type
 ```
 
 ## **Usage**
 
 ```js
-import realType from 'real-type';
+import realType from '@sinakhx/real-type';
 // or if you are using commonjs:
-const realType = require('real-type/dist/index.cjs').default;
+const realType = require('@sinakhx/real-type/dist/index.cjs').default;
 
 const customType = realTypeOf(new URL('http://example.com'));
 console.log(customType); // "URL"
