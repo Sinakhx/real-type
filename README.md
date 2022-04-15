@@ -32,12 +32,12 @@ Object.prototype.toString.call(class Foo{}) // "[object Function]"
 if you find it silly to treat `NaN` as `number` or classes as functions or even using `Object.prototype.toString.call` to get an array-like string, you can use `@sinakhx/real-type` instead:
 
 ```js
-realType(null)        // "Null"
-realType({})          // "Object"
-realType([])          // "Array"
-realType(new Date())  // "Date"
-realType(NaN)         // "NaN"
-realType(class Foo{}) // "Class"
+realTypeOf(null)        // "Null"
+realTypeOf({})          // "Object"
+realTypeOf([])          // "Array"
+realTypeOf(new Date())  // "Date"
+realTypeOf(NaN)         // "NaN"
+realTypeOf(class Foo{}) // "Class"
 realTypeOf(async () => {}) // "AsyncFunction"
 realTypeOf(new WeakMap()) // "WeakMap"
 // ...
@@ -54,9 +54,9 @@ yarn add @sinakhx/real-type
 ## **Usage**
 
 ```js
-import realType from '@sinakhx/real-type';
+import realTypeOf from '@sinakhx/real-type';
 // or if you are using commonjs:
-const realType = require('@sinakhx/real-type/dist/index.cjs').default;
+const realTypeOf = require('@sinakhx/real-type/dist/index.cjs').default;
 
 const customType = realTypeOf(new URL('http://example.com'));
 console.log(customType); // "URL"
